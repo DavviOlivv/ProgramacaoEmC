@@ -10,4 +10,11 @@ Os exercícios são de nível iniciante e foram feitos para praticar os conteúd
 - Variáveis e tipos de dados
 - Entrada e saída
 
+## Como compilar
+
+```bash
+gcc SuperTrunfo.c -o supertrunfo
+./supertrunfo
+
+
 
