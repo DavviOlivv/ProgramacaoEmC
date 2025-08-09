@@ -113,9 +113,9 @@ int main() {
 
     printf("Numeros de pontos turisticos: %d\n", segundoNumerosDePontosTuristicos);
 
-    printf("Densidade Populacional: %.2ff\n", segundaDensidadePopulacional);
+    printf("Densidade Populacional: %.2f\n", segundaDensidadePopulacional);
 
-    printf("Pib Per Capita: %,2f\n", segundoPibPerCapita);
+    printf("Pib Per Capita: %.2f\n", segundoPibPerCapita);
 
     return 0;
 }
