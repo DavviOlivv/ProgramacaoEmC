@@ -5,8 +5,9 @@ int main() {
     // Declaração de variáveis Da Primeira carta
 
     char estado [3], codigoDaCarta[5],nomeDaCidade[21];
-    int populacao, numerosDePontosTuristicos;
+    int numerosDePontosTuristicos;
     float pib, areaEmKm, densidadePopulacional, pibPerCapita;
+    unsigned long int populacao;
 
     printf("Digite uma letra de 'A' a 'H':  ");
     scanf(" %s", estado);
@@ -18,7 +19,7 @@ int main() {
     scanf(" %s", nomeDaCidade);
 
     printf("Digite a populacao da cidade: ");
-    scanf(" %d", &populacao);
+    scanf(" %lu", &populacao);
 
     printf("Digite a area da cidade em Km: ");
     scanf(" %f", &areaEmKm);
@@ -35,6 +36,14 @@ int main() {
 
     pibPerCapita = (pib * 1000000000) / populacao;
 
+    // Calculando Super Poder
+
+    float superPoder, inversoDaDensidadePopulacional;
+
+    inversoDaDensidadePopulacional = 1.0 / densidadePopulacional;
+
+    superPoder = (float) populacao + areaEmKm + pib + numerosDePontosTuristicos + pibPerCapita + inversoDaDensidadePopulacional;
+
     // Exibindo os Dados Da Primeira carta
 
     printf("\n-----Carta 1-----\n");
@@ -45,7 +54,7 @@ int main() {
 
     printf("Nome da cidade: %s\n", nomeDaCidade);
 
-    printf("Populacao: %d\n", populacao);
+    printf("Populacao: %lu\n", populacao);
 
     printf("Area: %.2f\n", areaEmKm);
 
@@ -64,8 +73,9 @@ int main() {
     printf("");
 
     char estadoDaSegundaCarta[3], codigoDaSegundaCarta[5], nomeDaSegundaCidade[21];
-    int segundaPopulacao, segundoNumerosDePontosTuristicos;
+    int segundoNumerosDePontosTuristicos;
     float segundoPib, segundaAreaEmKm, segundaDensidadePopulacional, segundoPibPerCapita;
+    unsigned long int segundaPopulacao;
 
     printf("Digite uma letra de 'A' a 'H':  ");
     scanf(" %s", estadoDaSegundaCarta);
@@ -77,7 +87,7 @@ int main() {
     scanf(" %s", nomeDaSegundaCidade);
 
     printf("Digite a populacao da cidade: ");
-    scanf(" %d", &segundaPopulacao);
+    scanf(" %lu", &segundaPopulacao);
 
     printf("Digite a area da cidade em Km: ");
     scanf(" %f", &segundaAreaEmKm);
@@ -95,6 +105,13 @@ int main() {
 
     segundoPibPerCapita = (float) (segundoPib * 1000000000) / segundaPopulacao;
 
+    // Calculando o Segundo Super Poder
+    float segundoSuperPoder, inversoDaSegundaDensidadePopulacional;
+    
+    inversoDaSegundaDensidadePopulacional = 1.0 / segundaDensidadePopulacional;
+
+    segundoSuperPoder = (float) segundaPopulacao + segundaAreaEmKm + segundoPib + segundoNumerosDePontosTuristicos + segundoPibPerCapita + inversoDaSegundaDensidadePopulacional;
+
     // Exibindo os Dados Da Segunda carta
 
     printf("\n-----Carta 2-----\n");
@@ -105,7 +122,7 @@ int main() {
 
     printf("Nome da cidade: %s\n", nomeDaSegundaCidade);
 
-    printf("Populacao: %d\n", segundaPopulacao);
+    printf("Populacao: %lu\n", segundaPopulacao);
 
     printf("Area: %.2f\n", segundaAreaEmKm);
 
@@ -117,5 +134,67 @@ int main() {
 
     printf("Pib Per Capita: %.2f\n", segundoPibPerCapita);
 
+    printf("");
+
+    // Comparando as Cartas e Saída de dados
+
+    printf("Comparação de Cartas:\n");
+
+    if (populacao > segundaPopulacao)
+    {
+    printf("Populacao: Carta 1 venceu (1)\n");
+   } else
+   {
+    printf("Populacao: Carta 2 venceu (0)\n");
+   }
+
+   if (areaEmKm > segundaAreaEmKm)
+   {
+    printf("Area: Carta 1 venceu (1)\n");
+   } else
+   {
+    printf("Area: Carta 2 venceu (0)\n");
+   }
+
+    if (pib > segundoPib)
+   {
+    printf("PIB: Carta 1 venceu (1)\n");
+   } else
+   {
+    printf("PIB: Carta 2 venceu (0)\n");
+   }
+
+   if (numerosDePontosTuristicos > segundoNumerosDePontosTuristicos)
+   {
+    printf("Pontos Turisticos: Carta 1 venceuu (1)\n");
+   } else
+   {
+    printf("Pontos Turisticos: Carta 2 venceuu (0)\n");
+   }
+   
+   if (densidadePopulacional < segundaDensidadePopulacional)
+   {
+    printf("Densidade Populacional: Carta 1 venceu (1)\n");
+   } else
+   {
+    printf("Densidade Populacional: Carta 2 venceu (0)\n");
+   }
+   
+   if (pibPerCapita > segundoPibPerCapita)
+   {
+    printf("PIB per Capita: Carta 1 venceu (1)\n");
+   } else
+   {
+    printf("PIB per Capita: Carta 2 venceu (0)\n");
+   }
+
+   if (superPoder > segundoSuperPoder)
+    {
+    printf("Super Poder: Carta 1 venceu (1)\n");
+   } else
+   {
+    printf("Super Poder: Carta 2 venceu (0)\n");
+   }
+   
     return 0;
 }
