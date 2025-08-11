@@ -13,7 +13,6 @@ Sobre os tipos usados:
 
 Assim o programa calcula certo e evita problemas com números grandes ou pequenos demais.
 */
-
     // ---------- PRIMEIRA CARTA ----------
     // Declaração das variáveis
     char estado[3], codigoDaCarta[5], nomeDaCidade[21];
@@ -125,11 +124,9 @@ Assim o programa calcula certo e evita problemas com números grandes ou pequeno
     printf("Densidade Populacional: %.2lf\n", segundaDensidadePopulacional);
     printf("Pib Per Capita: %.2lf\n", segundoPibPerCapita);
 
-    printf("");
-
-    // Comparando as Cartas e Saída de dados
-
-    printf("Comparação de Cartas:\n");
+    // ---------- COMPARAÇÕES ----------
+    printf("\n----------------------------------------\n");
+    printf("\nComparação de Cartas:\n");
 
     if (populacao > segundaPopulacao)
         printf("Populacao: Carta 1 venceu (1)\n");
@@ -166,7 +163,5 @@ Assim o programa calcula certo e evita problemas com números grandes ou pequeno
     else
         printf("Super Poder: Carta 2 venceu (0)\n");
 
-
-    
     return 0;
 }
