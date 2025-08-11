@@ -136,7 +136,7 @@ int main() {
 
     printf("");
 
-    // Comparando as Cartas e Saída de dados
+    // Comparando as Cartas e Exibindo o Resultado
 
     printf("Comparação de Cartas:\n");
 
